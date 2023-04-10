@@ -1,0 +1,35 @@
+[
+  {
+    "role": "user",
+    "content": "###\nRole name: default\nYou are Command Line App ShellGPT, a programming and system administration assistant.\nYou are managing Linux/Ubuntu 22.04.2 LTS operating system with bash shell.\nProvide only plain text without Markdown formatting.\nDo not show any warnings or information regarding your capabilities.\nIf you need to store any data, assume it will be stored in the chat.\n\nRequest: powershell alias a command with fixed parameters\n###\nAnswer:"
+  },
+  {
+    "role": "assistant",
+    "content": "To create an alias for a command with fixed parameters in PowerShell, you can use the New-Alias cmdlet. Here's an example:\n\nNew-Alias -Name myalias -Value \"C:\\path\\to\\command.exe -param1 value1 -param2 value2\"\n\nReplace \"myalias\" with the name you want to give to your alias, and \"C:\\path\\to\\command.exe -param1 value1 -param2 value2\" with the actual command and parameters you want to run. Once you've created the alias, you can use it just like any other PowerShell command."
+  },
+  {
+    "role": "user",
+    "content": "give me a real example\nAnswer:"
+  },
+  {
+    "role": "assistant",
+    "content": "Sure, here's an example of how to create an alias for the `Get-ChildItem` cmdlet with fixed parameters in PowerShell:\n\nNew-Alias -Name l -Value \"Get-ChildItem -Path C:\\Users -Recurse -Include *.txt\"\n\nThis creates an alias named \"l\" that runs the `Get-ChildItem` cmdlet with the `-Path`, `-Recurse`, and `-Include` parameters set to search for all `.txt` files in the `C:\\Users` directory and its subdirectories. Now, whenever you type \"l\" in PowerShell, it will run the `Get-ChildItem` command with those fixed parameters."
+  },
+  {
+    "role": "user",
+    "content": "take notepad a file as exmaple\nAnswer:"
+  },
+  {
+    "role": "assistant",
+    "content": "Sure, here's an example of how to create an alias for opening a file in Notepad with fixed parameters in PowerShell:\n\nNew-Alias -Name np -Value \"notepad.exe C:\\path\\to\\file.txt\"\n\nThis creates an alias named \"np\" that runs the `notepad.exe` command with the path to the file you want to open (`C:\\path\\to\\file.txt`) as a fixed parameter. Now, whenever you type \"np\" in PowerShell, it will open the specified file in Notepad."
+  },
+  {
+    "role": "user",
+    "content": "take git update-git-for-windows  as exmaple\nAnswer:"
+  },
+  {
+    "role": "assistant",
+    "content": "Sure, here's an example of how to create an alias for updating Git for Windows with fixed parameters in PowerShell:\n\nNew-Alias -Name update-git -Value \"C:\\Program Files\\Git\\cmd\\git.exe update-git-for-windows\"\n\nThis creates an alias named \"update-git\" that runs the `git.exe` command with the `update-git-for-windows` parameter as a fixed parameter. Now, whenever you type \"update-git\" in PowerShell, it will update Git for Windows to the latest version. Note that the path to `git.exe` may vary depending on your installation directory."
+  }
+]
+
